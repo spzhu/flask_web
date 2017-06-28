@@ -1,0 +1,8 @@
+{{ user.username }}, 您好。
+Welcome to Flasky
+
+href="{{ url_for('auth.confirm', token=token, _external=True) }}">请点击此处以激活您的账号。
+
+或者，复制以下链接到浏览器打开激活账号。
+{{ url_for('auth.confirm', token=token, _external=True) }}
+感谢您的使用！
