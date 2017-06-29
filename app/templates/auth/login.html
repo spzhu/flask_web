@@ -12,9 +12,8 @@
     <br>
     <p>
         没有账号？
-        <a href="{{ url_for('auth.register') }}">
-            点击注册
-        </a>
+        <a href="{{ url_for('auth.register') }}">点击注册</a>
+        <a href="{{ url_for('auth.reset_password_request' )}}">忘记密码？</a>
     </p>
 </div>
 {% endblock %}
