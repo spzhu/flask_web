@@ -40,5 +40,6 @@ class EditProfileAdminForm(FlaskForm):
             raise ValidationError('该用户名已被使用。')
 
 class PostForm(FlaskForm):
+    title = TextAreaField('文章标题', validators=[Required()])
     body = PageDownField("文章内容", validators=[Required()])
     submit = SubmitField("提交")

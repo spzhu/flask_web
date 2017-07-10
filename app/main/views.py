@@ -48,10 +48,12 @@ def edit_post(id):
     form = PostForm()
     if form.validate_on_submit():
         post.body = form.body.data
+        post.title = form.title.data
         db.session.add(post)
         flash('文章成功提交。')
         return redirect(url_for('.post', id=post.id))
     form.body.data = post.body
+    form.title.data = post.title
     return render_template('edit_post.html', form=form)
 
 @main.route('/edit-profile', methods=['GET', 'POST'])
