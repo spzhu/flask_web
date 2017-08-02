@@ -1,7 +1,4 @@
-Flasky
-======
-
-This repository contains the source code examples for my O'Reilly book [Flask Web Development](http://www.flaskbook.com).
-
-The commits and tags in this repository were carefully created to match the sequence in which concepts are presented in the book. Please read the section titled "How to Work with the Example Code" in the book's preface for instructions.
+Flask Web开发：基于Python的Web应用开发实战 参考代码学习过程
+数据库由sqlite3改为mysql
+内容稍作修改
 
