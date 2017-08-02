@@ -15,6 +15,7 @@ class UserModeTestCase(unittest.TestCase):
         db.drop_all()
         self.app_context.pop()
 
+
     def test_valid_confirm_token(self):
         u = User(password='cat')
         db.session.add(u)

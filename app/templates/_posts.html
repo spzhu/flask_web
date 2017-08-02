@@ -13,6 +13,7 @@
             </div>
             <div class="post-title">
                 <a href="{{ url_for('.post', id=post.id) }}"><h3>{{ post.title }}</h3></a>
+            </div>
             <div class="post-body">
                 {% if post.body_html %}
                     {{ post.body_html | safe }}
@@ -30,6 +31,9 @@
                     <span class="label label-danger">编辑[管理员]</span>
                 </a>
                 {% endif %}
+                <a href="{{ url_for('.post', id=post.id) }}#comments">
+                    <span class="label label-primary">{{ post.comments.count() }}评论</span>
+                </a>
             </div>
         </div>
     </li>

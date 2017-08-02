@@ -43,3 +43,7 @@ class PostForm(FlaskForm):
     title = TextAreaField('文章标题', validators=[Required()])
     body = PageDownField("文章内容", validators=[Required()])
     submit = SubmitField("提交")
+
+class CommentForm(FlaskForm):
+    body = StringField('', validators=[Required()])
+    submit = SubmitField("提交")
